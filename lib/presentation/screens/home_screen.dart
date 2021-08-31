@@ -18,14 +18,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // int _counter = 0;
-
-  // void _incrementCounter() {
-  //   setState(() {
-  //     _counter++;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,14 +83,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(color: Colors.white),
               ),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).push(
+                  MaterialPageRoute(
                     builder: (_) => BlocProvider.value(
-                          value: BlocProvider.of<CounterCubit>(context),
-                          child: SecondScreen(
-                            title: 'Second Screen',
-                            color: Colors.redAccent,
-                          ),
-                        )));
+                      value: BlocProvider.of<CounterCubit>(
+                          context), // value of existing cubit with the containing context, not a new one!
+                      child: SecondScreen(
+                        title: 'Second Screen',
+                        color: Colors.redAccent,
+                      ),
+                    ),
+                  ),
+                );
               },
               color: widget.color,
             )

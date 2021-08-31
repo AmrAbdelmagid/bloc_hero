@@ -2,8 +2,8 @@ import 'package:bloc_hero/business_logic/cubits/counter_cubit/counter_cubit.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SecondScreen extends StatefulWidget {
-  SecondScreen({
+class ThirdScreen extends StatefulWidget {
+  ThirdScreen({
     Key? key,
     required this.title,
     required this.color,
@@ -13,10 +13,10 @@ class SecondScreen extends StatefulWidget {
   final Color color;
 
   @override
-  _SecondScreenState createState() => _SecondScreenState();
+  _ThirdScreenState createState() => _ThirdScreenState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _ThirdScreenState extends State<ThirdScreen> {
   // int _counter = 0;
 
   // void _incrementCounter() {
